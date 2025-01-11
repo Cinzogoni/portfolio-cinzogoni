@@ -101,7 +101,9 @@ function Home() {
               );
             })}
           </div>
+
           <div className={cx("social")}></div>
+
           <div className={cx("contact")}></div>
         </div>
       </div>

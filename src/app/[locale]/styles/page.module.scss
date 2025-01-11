@@ -1,8 +1,28 @@
 @use "./variable.scss" as *;
 
 .container {
+  height: 100%;
   min-width: 480px;
   display: flex;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-thumb-color white;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb-color;
+    border-radius: 8px;
+  }
 }
 
 .side-bar {
@@ -63,18 +83,17 @@
   width: 100%;
   max-width: 340px;
   height: 340px;
-  background-color: $second-text-color;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: $third-shadow;
 }
 
 .img-box {
   width: 320px;
   height: 320px;
   border-radius: 999px;
-  box-shadow: $first-shadow;
 }
 
 .image {
@@ -82,7 +101,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 999px;
-  box-shadow: $first-shadow;
+  filter: $filter-img;
 }
 
 .desc {
@@ -177,6 +196,7 @@
   }
 
   .side-bar {
+    padding: 24px 24px 0 24px;
     box-shadow: 0px 5px 10px 0px rgba(59, 30, 2, 0.4);
   }
 
@@ -213,7 +233,7 @@
   }
 
   .board {
-    height: 428px;
+    height: 430px;
     background-color: $first-background-color;
     border-top-left-radius: $corner-radius;
     border-top-right-radius: $corner-radius;
@@ -233,7 +253,7 @@
     width: 180px;
     height: 180px;
     position: absolute;
-    top: -88px;
+    top: -93px;
     left: 24px;
     box-shadow: $first-shadow;
   }
@@ -246,7 +266,7 @@
   .desc {
     display: block;
     position: absolute;
-    bottom: 12px;
+    bottom: 20px;
     height: 60px;
   }
 
@@ -267,11 +287,18 @@
   .skills,
   .social,
   .contact {
+    width: 100%;
+    max-width: calc(100% - 12px);
     height: 80px;
     margin-top: 6px;
     padding: 0 24px;
     font-size: 1.8rem;
     color: $first-text-color;
+    margin: 0 auto;
+  }
+
+  .contact {
+    margin-bottom: 12px;
   }
 
   .skill-name {
@@ -280,6 +307,7 @@
 
   .skill-box {
     box-shadow: 0px 0px 8px rgba(92, 65, 39, 0.7);
+    background-color: unset;
   }
 }
 

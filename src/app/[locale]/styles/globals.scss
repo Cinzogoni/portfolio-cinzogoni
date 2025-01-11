@@ -9,25 +9,8 @@ body {
   background-color: $first-background-color;
   user-select: none;
   text-rendering: optimizeSpeed;
-
   overflow-x: hidden;
-  overflow-y: auto;
-
-  scrollbar-width: thin;
-  scrollbar-color: $scrollbar-thumb-color white;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    border-radius: 8px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar-thumb-color;
-    border-radius: 8px;
-  }
+  overflow-y: hidden;
 }
 
 * {
