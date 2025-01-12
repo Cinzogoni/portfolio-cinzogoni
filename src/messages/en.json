@@ -1,6 +1,8 @@
 {
   "HomePage": {
     "introduce": "Introduce",
-    "mySkills": "My skills"
+    "mySkills": "My skills",
+    "socialNetwork": "Social network",
+    "contact": "Let's talk projects!"
   }
 }

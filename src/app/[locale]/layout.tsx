@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 
 import "../[locale]/styles/globals.scss";
+import styles from "../[locale]/styles/layout.module.scss";
+import classNames from "classnames/bind";
+const cx = classNames.bind(styles);
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing, Locale } from "src/i18n/routing";
+
+import Sidebar from "../components/Sidebar/Sidebar";
 
 export const metadata: Metadata = {
   title: "Cinzogoni Portfolio",
@@ -42,11 +47,17 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages({ locale });
+
   return (
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <div className={cx("container")}>
+            <div className={cx("sidebar")}>
+              <Sidebar />
+            </div>
+            <main className={cx("content")}>{children}</main>
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

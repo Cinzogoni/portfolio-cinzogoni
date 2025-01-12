@@ -1,281 +1,294 @@
 @use "./variable.scss" as *;
 
-.board {
+.wrapper {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.header {
-  width: 100%;
-  height: 60px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  width: 35px;
-  height: 45px;
-}
-
-.logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: $filter-img;
-}
-
-.link {
-  flex: 1;
-}
-
-.introduce {
-  font-size: 1.6rem;
-  color: $second-text-color;
-  margin: 0 36px;
-}
-
-.avatar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.avatar-frame {
-  width: 100%;
-  max-width: 340px;
-  height: 340px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: $third-shadow;
-}
-
-.avatar-box {
-  width: 320px;
-  height: 320px;
-  border-radius: 999px;
-}
-
-.avatar-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 999px;
-  filter: $filter-img;
-}
-
-.desc {
-  height: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.professional-title {
-  color: $second-text-color;
-  font-size: 3.8rem;
-  text-align: center;
-  text-shadow: $text-shadow;
-}
-
-.international-name {
-  color: $second-text-color;
-  font-size: 3rem;
-  text-align: center;
-  text-shadow: $text-shadow;
-}
-
-.skills,
-.social,
-.contact {
-  width: 100%;
-  height: 95px;
-  margin-top: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: $corner-radius;
-  position: relative;
-  box-shadow: $second-shadow;
-}
-
-.boxes {
-  width: 50px;
-  height: 50px;
-  border-radius: 999px;
-  margin: 0 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $third-background-color;
-  box-shadow: $third-shadow;
-}
-
-.heading {
-  width: 100px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -16px;
-  left: 18px;
-  z-index: 10;
-  background-color: $third-background-color;
-  border-radius: $corner-radius;
-  box-shadow: $third-shadow;
-}
-
-.title {
-  font-size: 1.8rem;
-  color: $second-text-color;
-  text-shadow: $text-shadow;
-}
-
-.box {
-  width: 25px;
-  height: 25px;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: $filter-img;
-}
-
-@media (max-width: 1280px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .side-bar {
-    padding: 24px 24px 0 24px;
-    box-shadow: 0px 5px 10px 0px rgba(59, 30, 2, 0.4);
-  }
+  padding: 12px;
+  background-color: $second-background-color;
+  box-shadow: 0px 5px 10px 0px rgba(59, 30, 2, 0.4);
 
   .header {
-    margin: 0;
-    height: 140px;
-    align-items: unset;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-  }
 
-  .img {
-    width: 65px;
-    height: 75px;
-  }
+    .logo-img {
+      width: 35px;
+      height: 45px;
 
-  .language {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+      .logo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: $filter-img;
+      }
+    }
 
-  .link {
-    flex: unset;
-  }
+    .link {
+      flex: 1;
 
-  .introduce {
-    position: absolute;
-    margin: 0;
-    bottom: 12px;
-    right: 24px;
-  }
-
-  .board {
-    height: 430px;
-    background-color: $first-background-color;
-    border-top-left-radius: $corner-radius;
-    border-top-right-radius: $corner-radius;
+      .introduce {
+        font-size: 1.6rem;
+        color: $second-text-color;
+        margin: 0 36px;
+      }
+    }
   }
 
   .avatar {
-    height: 40px;
-    padding: 0 24px;
-    box-shadow: $gap-shadow;
-    border-top-left-radius: $corner-radius;
-    border-top-right-radius: $corner-radius;
-    display: block;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .avatar-frame {
+      width: 340px;
+      height: 340px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: $third-shadow;
+
+      .avatar-box {
+        width: 320px;
+        height: 320px;
+        border-radius: 999px;
+
+        .avatar-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 999px;
+          filter: $filter-img;
+        }
+      }
+    }
+
+    .desc {
+      height: 167px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .professional-title {
+        color: $second-text-color;
+        font-size: 3.8rem;
+        text-align: center;
+        text-shadow: $text-shadow;
+      }
+
+      .international-name {
+        color: $second-text-color;
+        font-size: 3rem;
+        text-align: center;
+        text-shadow: $text-shadow;
+      }
+    }
   }
 
-  .avatar-frame {
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    top: -93px;
-    left: 24px;
-    box-shadow: $first-shadow;
-  }
+  .board {
+    height: 354px;
+    display: flex;
+    flex-direction: column;
 
-  .avatar-box {
-    width: 160px;
-    height: 160px;
-  }
+    .skills,
+    .social,
+    .contact {
+      flex: 1;
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $corner-radius;
+      position: relative;
+      box-shadow: $second-shadow;
 
-  .desc {
-    display: block;
-    position: absolute;
-    bottom: 20px;
-    height: 60px;
-  }
+      .heading {
+        padding: 0 12px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -16px;
+        left: 18px;
+        z-index: 10;
+        background-color: $third-background-color;
+        border-radius: $corner-radius;
+        box-shadow: $third-shadow;
 
-  .international-name,
-  .professional-title {
-    text-align: unset;
-    color: $first-text-color;
-  }
+        .title {
+          font-size: 1.8rem;
+          color: $second-text-color;
+          text-shadow: $text-shadow;
+        }
+      }
 
-  .professional-title {
-    font-size: 2.4rem;
-  }
+      .boxes {
+        width: 50px;
+        height: 50px;
+        border-radius: 999px;
+        margin: 0 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $third-background-color;
+        box-shadow: $third-shadow;
 
-  .international-name {
-    font-size: 1.8rem;
-  }
+        .box {
+          width: 25px;
+          height: 25px;
 
-  .skills,
-  .social,
-  .contact {
+          .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: $filter-img;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .wrapper {
     width: 100%;
-    max-width: calc(100% - 12px);
-    height: 80px;
-    margin-top: 6px;
-    padding: 0 24px;
-    font-size: 1.8rem;
-    color: $first-text-color;
-    margin: 0 auto;
-  }
+    height: 100%;
+    padding: 0;
 
-  .contact {
-    margin-bottom: 12px;
-  }
+    .header {
+      margin: 0;
+      height: 140px;
+      align-items: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
 
-  .heading {
-    background-color: rgba(92, 65, 39, 1);
-  }
+      .logo-img {
+        width: 65px;
+        height: 75px;
+      }
 
-  .boxes {
-    box-shadow: 0px 0px 8px rgba(92, 65, 39, 0.7);
-    background-color: unset;
+      .link {
+        flex: unset;
+
+        .introduce {
+          position: absolute;
+          margin: 0;
+          bottom: 12px;
+          right: 24px;
+        }
+      }
+
+      .language {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .avatar {
+      height: 120px;
+      padding: 0 24px;
+      box-shadow: $gap-shadow;
+      border-top-left-radius: $corner-radius;
+      border-top-right-radius: $corner-radius;
+      display: block;
+      position: relative;
+
+      .avatar-frame {
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        top: -93px;
+        left: 24px;
+        box-shadow: $first-shadow;
+
+        .avatar-box {
+          width: 160px;
+          height: 160px;
+        }
+      }
+
+      .desc {
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        left: 210px;
+        height: 60px;
+        margin: 0 12px;
+
+        .international-name,
+        .professional-title {
+          text-align: unset;
+        }
+
+        .professional-title {
+          font-size: clamp(2rem, 3.5vw, 2.4rem);
+        }
+
+        .international-name {
+          font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+        }
+      }
+    }
+
+    .board {
+      width: 100%;
+      height: 294px;
+      background-color: $first-background-color;
+      border-top-left-radius: $corner-radius;
+      border-top-right-radius: $corner-radius;
+
+      .skills,
+      .social,
+      .contact {
+        width: 100%;
+        height: 80px;
+        margin-top: 6px;
+        padding: 0 24px;
+        font-size: 1.8rem;
+        border-radius: unset;
+        color: $first-text-color;
+        margin: 0 auto;
+
+        .heading {
+          background-color: rgba(92, 65, 39, 1);
+        }
+
+        .boxes {
+          box-shadow: 0px 0px 8px rgba(92, 65, 39, 0.7);
+          background-color: unset;
+        }
+      }
+
+      .social {
+        margin-top: 24px;
+      }
+
+      .contact {
+        margin-top: 24px;
+      }
+    }
   }
 }
 
 @media (max-width: 640px) {
-  .boxes {
-    width: 40px;
-    height: 40px;
-    box-shadow: 0px 0px 8px rgba(92, 65, 39, 0.7);
+  .wrapper {
+    .board {
+      .skills,
+      .social,
+      .contact {
+        .boxes {
+          width: 40px;
+          height: 40px;
+          box-shadow: 0px 0px 8px rgba(92, 65, 39, 0.7);
+        }
+      }
+    }
   }
 }

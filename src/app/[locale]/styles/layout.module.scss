@@ -1,0 +1,50 @@
+@use "./variable.scss" as *;
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  min-width: 480px;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-thumb-color white;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb-color;
+    border-radius: 8px;
+  }
+
+  .sidebar {
+    flex: 0 0 554px;
+    height: 100%;
+    background-color: $second-background-color;
+    box-shadow: 5px 0px 10px 0px rgba(59, 30, 2, 0.3);
+  }
+
+  .content {
+    flex: 1;
+    height: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    flex-direction: column;
+
+    .sidebar {
+      flex: 0 0 580px;
+      padding: 24px 24px 0 24px;
+      box-shadow: 0px 5px 10px 0px rgba(59, 30, 2, 0.4);
+    }
+  }
+}
