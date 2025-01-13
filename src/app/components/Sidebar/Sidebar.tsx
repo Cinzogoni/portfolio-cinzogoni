@@ -154,9 +154,15 @@ function Sidebar() {
             <h3 className={cx("title")}>{t("contact")}</h3>
           </div>
 
-          <button className={cx("btn")}>
-            <h4 className={cx("click")}>Contact me!</h4>
-          </button>
+          <div className={cx("btn-box")}>
+            <button className={cx("btn")}>
+              <span className={cx("animate")}></span>
+              <span className={cx("animate")}></span>
+              <span className={cx("animate")}></span>
+              <span className={cx("animate")}></span>
+              <h4 className={cx("click")}>{t("contactNow")}</h4>
+            </button>
+          </div>
         </div>
       </div>
     </div>
