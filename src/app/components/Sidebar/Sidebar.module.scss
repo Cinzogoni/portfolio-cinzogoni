@@ -4,7 +4,6 @@
   width: 100%;
   padding: 12px;
   background-color: $primary-bg-dark;
-  box-shadow: $primary-blend-shadow;
 
   .header {
     width: 100%;
@@ -336,8 +335,6 @@
 
     .board {
       width: 100%;
-      border-top-left-radius: $primary-radius;
-      border-top-right-radius: $primary-radius;
 
       .skills,
       .social,
@@ -349,6 +346,8 @@
         font-size: 1.8rem;
         border-radius: unset;
         color: $primary-text-color;
+        border-top-left-radius: $primary-radius;
+        border-top-right-radius: $primary-radius;
         margin: 0 auto;
       }
 
