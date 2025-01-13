@@ -3,8 +3,8 @@
 .wrapper {
   width: 100%;
   padding: 12px;
-  background-color: $second-background-color;
-  box-shadow: 0px 5px 10px 0px rgba(59, 30, 2, 0.4);
+  background-color: $primary-bg-dark;
+  box-shadow: $primary-blend-shadow;
 
   .header {
     width: 100%;
@@ -30,7 +30,7 @@
 
       .introduce {
         font-size: 1.6rem;
-        color: $second-text-color;
+        color: $secondary-text-color;
         margin: 0 36px;
       }
     }
@@ -44,16 +44,14 @@
     .avatar-frame {
       width: 340px;
       height: 340px;
-      border-radius: 999px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: $third-shadow;
 
       .avatar-box {
         width: 320px;
         height: 320px;
-        border-radius: 999px;
+        @include depthShadow();
 
         .avatar-img {
           width: 100%;
@@ -73,14 +71,14 @@
       justify-content: center;
 
       .professional-title {
-        color: $second-text-color;
+        color: $secondary-text-color;
         font-size: 3.8rem;
         text-align: center;
         text-shadow: $text-shadow;
       }
 
       .international-name {
-        color: $second-text-color;
+        color: $secondary-text-color;
         font-size: 3rem;
         text-align: center;
         text-shadow: $text-shadow;
@@ -92,6 +90,7 @@
     height: 354px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     .skills,
     .social,
@@ -102,8 +101,8 @@
       align-items: center;
       justify-content: center;
       border-radius: $corner-radius;
+      box-shadow: $secondary-gap-shadow;
       position: relative;
-      box-shadow: $second-shadow;
 
       .heading {
         padding: 0 12px;
@@ -115,38 +114,40 @@
         top: -16px;
         left: 18px;
         z-index: 10;
-        background-color: $third-background-color;
+        background-color: rgba(92, 65, 39, 1);
         border-radius: $corner-radius;
-        box-shadow: $third-shadow;
+        border: $primary-border;
 
         .title {
           font-size: 1.8rem;
-          color: $second-text-color;
-          text-shadow: $text-shadow;
+          color: $secondary-text-color;
         }
       }
 
-      .boxes {
+      .box {
         width: 50px;
         height: 50px;
-        border-radius: 999px;
         margin: 0 6px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $third-background-color;
-        box-shadow: $third-shadow;
+        @include frameShadow();
 
-        .box {
+        .img {
           width: 25px;
           height: 25px;
+          object-fit: cover;
+          filter: $filter-img;
+        }
+      }
 
-          .img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: $filter-img;
-          }
+      .btn {
+        padding: 6px 12px;
+        @include contactShadow();
+
+        .click {
+          color: $secondary-text-color;
+          font-size: 2rem;
         }
       }
     }
@@ -194,7 +195,7 @@
     .avatar {
       height: 120px;
       padding: 0 24px;
-      box-shadow: $gap-shadow;
+      box-shadow: $primary-gap-shadow;
       border-top-left-radius: $corner-radius;
       border-top-right-radius: $corner-radius;
       display: block;
@@ -206,7 +207,6 @@
         position: absolute;
         top: -93px;
         left: 24px;
-        box-shadow: $first-shadow;
 
         .avatar-box {
           width: 160px;
@@ -239,8 +239,6 @@
 
     .board {
       width: 100%;
-      height: 294px;
-      background-color: $first-background-color;
       border-top-left-radius: $corner-radius;
       border-top-right-radius: $corner-radius;
 
@@ -253,17 +251,8 @@
         padding: 0 24px;
         font-size: 1.8rem;
         border-radius: unset;
-        color: $first-text-color;
+        color: $primary-text-color;
         margin: 0 auto;
-
-        .heading {
-          background-color: rgba(92, 65, 39, 1);
-        }
-
-        .boxes {
-          box-shadow: 0px 0px 8px rgba(92, 65, 39, 0.7);
-          background-color: unset;
-        }
       }
 
       .social {
@@ -272,22 +261,6 @@
 
       .contact {
         margin-top: 24px;
-      }
-    }
-  }
-}
-
-@media (max-width: 640px) {
-  .wrapper {
-    .board {
-      .skills,
-      .social,
-      .contact {
-        .boxes {
-          width: 40px;
-          height: 40px;
-          box-shadow: 0px 0px 8px rgba(92, 65, 39, 0.7);
-        }
       }
     }
   }

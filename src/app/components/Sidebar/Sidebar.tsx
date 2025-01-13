@@ -59,7 +59,7 @@ const social = [
   },
   {
     id: 3,
-    img: "/assets/img/x-black.png",
+    img: "/assets/img/x-white.png",
     name: "X",
     link: "https://x.com/Cinzogoni",
   },
@@ -118,10 +118,8 @@ function Sidebar() {
           </div>
           {skills.map((skill, index) => {
             return (
-              <div key={index} className={cx("boxes")}>
-                <div className={cx("box")}>
-                  <img className={cx("img")} src={skill.img} alt={skill.name} />
-                </div>
+              <div key={index} className={cx("box")}>
+                <img className={cx("img")} src={skill.img} alt={skill.name} />
               </div>
             );
           })}
@@ -133,16 +131,18 @@ function Sidebar() {
           </div>
           {social.map((social, index) => {
             return (
-              // @ts-ignore
-              <Link href={social.link} target="_blank" key={index}>
-                <div className={cx("boxes")}>
-                  <div className={cx("box")}>
-                    <img
-                      className={cx("img")}
-                      src={social.img}
-                      alt={social.name}
-                    />
-                  </div>
+              <Link
+                // @ts-ignore
+                href={social.link}
+                target="_blank"
+                key={index}
+              >
+                <div className={cx("box")}>
+                  <img
+                    className={cx("img")}
+                    src={social.img}
+                    alt={social.name}
+                  />
                 </div>
               </Link>
             );
@@ -153,6 +153,10 @@ function Sidebar() {
           <div className={cx("heading")}>
             <h3 className={cx("title")}>{t("contact")}</h3>
           </div>
+
+          <button className={cx("btn")}>
+            <h4 className={cx("click")}>Contact me!</h4>
+          </button>
         </div>
       </div>
     </div>

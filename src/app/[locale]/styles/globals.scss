@@ -2,9 +2,9 @@
 
 html,
 body {
-  font-family: $text-font;
+  font-family: $main-font;
   font-size: 62.5%;
-  background-color: $first-background-color;
+  background-color: $primary-bg-light;
   user-select: none;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
