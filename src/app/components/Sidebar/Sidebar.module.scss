@@ -1,4 +1,5 @@
 @use "./variable.scss" as *;
+@use "sass:color";
 
 .wrapper {
   width: 100%;
@@ -172,7 +173,7 @@
               background: linear-gradient(
                 90deg,
                 transparent,
-                lighten($button-bg, 35%)
+                color.adjust($button-bg, $lightness: 35%)
               );
             }
 
@@ -184,7 +185,7 @@
               background: linear-gradient(
                 270deg,
                 transparent,
-                lighten($button-bg, 35%)
+                color.adjust($button-bg, $lightness: 35%)
               );
             }
 
@@ -196,7 +197,7 @@
               background: linear-gradient(
                 180deg,
                 transparent,
-                lighten($button-bg, 35%)
+                color.adjust($button-bg, $lightness: 35%)
               );
             }
 
@@ -208,7 +209,7 @@
               background: linear-gradient(
                 360deg,
                 transparent,
-                lighten($button-bg, 35%)
+                color.adjust($button-bg, $lightness: 35%)
               );
             }
           }
