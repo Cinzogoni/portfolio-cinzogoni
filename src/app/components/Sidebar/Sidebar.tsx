@@ -12,68 +12,54 @@ const skills = [
     img: "/assets/img/html.png",
     name: "html",
   },
+
   {
     id: 2,
-    img: "/assets/img/css.png",
-    name: "css",
-  },
-  {
-    id: 3,
-    img: "/assets/img/js.png",
-    name: "javascript",
-  },
-  {
-    id: 4,
     img: "/assets/img/ts.png",
     name: "typescript",
   },
   {
-    id: 5,
+    id: 3,
     img: "/assets/img/sass.png",
     name: "sass",
   },
   {
-    id: 6,
+    id: 4,
     img: "/assets/img/react.png",
     name: "react",
   },
   {
-    id: 7,
+    id: 5,
     img: "/assets/img/redux-toolkit.png",
     name: "redux toolkit",
   },
 ];
 
-const social = [
+const hyperlinks = [
   {
     id: 1,
+    img: "/assets/img/github.png",
+    name: "github",
+    link: "https://github.com/Cinzogoni",
+  },
+  {
+    id: 2,
     img: "/assets/img/facebook.png",
     name: "facebook",
     link: "https://www.facebook.com/ThaiChiHuy",
   },
   {
-    id: 2,
+    id: 3,
     img: "/assets/img/instagram.png",
     name: "instagram",
     link: "https://www.instagram.com/cinzogoni.thai",
   },
-  {
-    id: 3,
-    img: "/assets/img/x-white.png",
-    name: "X",
-    link: "https://x.com/Cinzogoni",
-  },
+
   {
     id: 4,
     img: "/assets/img/youtube.png",
     name: "youtube",
     link: "https://www.youtube.com/c/Th%C3%A1iCh%C3%ADHuy93",
-  },
-  {
-    id: 5,
-    img: "/assets/img/tiktok.png",
-    name: "tiktok",
-    link: "https://www.tiktok.com/@cinzogoni390171",
   },
 ];
 
@@ -125,23 +111,23 @@ function Sidebar() {
           })}
         </div>
 
-        <div className={cx("social")}>
+        <div className={cx("hyper-link")}>
           <div className={cx("heading")}>
-            <h3 className={cx("title")}>{t("socialNetwork")}</h3>
+            <h3 className={cx("title")}>{t("hyperLink")}</h3>
           </div>
-          {social.map((social, index) => {
+          {hyperlinks.map((Hyperlink, index) => {
             return (
               <Link
                 // @ts-ignore
-                href={social.link}
+                href={Hyperlink.link}
                 target="_blank"
                 key={index}
               >
                 <div className={cx("box")}>
                   <img
                     className={cx("img")}
-                    src={social.img}
-                    alt={social.name}
+                    src={Hyperlink.img}
+                    alt={Hyperlink.name}
                   />
                 </div>
               </Link>

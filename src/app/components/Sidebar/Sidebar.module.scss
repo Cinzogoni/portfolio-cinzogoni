@@ -93,7 +93,7 @@
     justify-content: center;
 
     .skills,
-    .social,
+    .hyper-link,
     .contact {
       flex: 1;
       margin-top: 24px;
@@ -338,7 +338,7 @@
       width: 100%;
 
       .skills,
-      .social,
+      .hyper-link,
       .contact {
         width: 100%;
         height: 80px;
@@ -352,7 +352,7 @@
         margin: 0 auto;
       }
 
-      .social,
+      .hyper-link,
       .contact {
         margin-top: 24px;
       }
@@ -364,7 +364,7 @@
   .wrapper {
     .board {
       .skills,
-      .social,
+      .hyper-link,
       .contact {
         .box {
           width: 43px;
